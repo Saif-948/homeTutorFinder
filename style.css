@@ -1,0 +1,7 @@
+@layer utilities {
+    .bg-education-pattern {
+      background-image: url('images/bg-img.jpg'); 
+      background-repeat: repeat;
+    }
+  }
+  

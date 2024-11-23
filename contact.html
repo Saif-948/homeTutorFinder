@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-gray-900 text-white">
+
+    <!-- Navbar -->
+
+    <nav class="bg-gray-900 text-white px-6 py-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <div class="text-2xl font-bold">
+                <a href="index.html" class="flex items-center flex-col md:flex-row">
+                    <div class="flex items-center space-x-3">
+                        <!-- Icon -->
+                        <div class="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-3 rounded-full shadow-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 10h11M9 21V3m12 18V10m-6 11v-4m0 0H9m6 0h3" />
+                            </svg>
+                        </div>
+
+                        <!-- Text -->
+                        <h1 class="text-3xl font-bold text-gray-900">
+                            <span class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text">
+                                Hyderabad
+                            </span>
+                        </h1>
+                    </div>
+
+                    <!-- Subtitle -->
+                    <span class="md:ml-2 md:mt-0 mt-2 text-center md:text-left"> ~Based Home Tutor Finder</span>
+                </a>
+            </div>
+
+            <!-- Contact Us Button -->
+            <div class="hidden md:block">
+                <a href="tutors.html"
+                    class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-pink-500 hover:to-purple-500 text-white px-6 py-2 rounded-lg shadow-md transform hover:scale-105 transition-transform mr-4">
+                    Tutors
+                </a>
+                <a href="contact.html"
+                    class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-pink-500 hover:to-purple-500 text-white px-6 py-2 rounded-lg shadow-md transform hover:scale-105 transition-transform">
+                    Contact Us
+                </a>
+            </div>
+
+
+            <!-- Mobile Menu Button (Hamburger) -->
+            <div class="md:hidden flex items-center">
+                <button id="menuButton" class="text-white focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Initially hidden) -->
+        <div id="mobileMenu" class="md:hidden hidden bg-gray-800 text-white">
+            <a href="tutors.html" class="block px-6 py-3 text-center hover:bg-gray-700">Tutors</a>
+            <a href="contact.html" class="block px-6 py-3 text-center hover:bg-gray-700">Contact Us</a>
+        </div>
+
+        <script>
+            const menuButton = document.getElementById('menuButton');
+            const mobileMenu = document.getElementById('mobileMenu');
+
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden'); // Show or hide the mobile menu
+            });
+
+        </script>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto py-12 px-6 md:px-20">
+
+        <!-- Side-by-Side Layout -->
+        <section class="bg-gray-800 rounded-lg shadow-md p-8 md:flex md:space-x-8">
+
+            <!-- Company Details -->
+            <div class="md:w-1/2 space-y-6">
+                <h2 class="text-2xl md:text-3xl font-semibold">About Us</h2>
+                <p class="text-gray-300">
+                    At <span class="font-bold text-white">Tutor Finder</span>, we connect students with qualified tutors
+                    across Hyderabad.
+                    We aim to provide the best learning support for students to excel academically.
+                </p>
+                <div class="space-y-4 text-sm md:text-base">
+                    <p><strong><i class="fa-solid fa-square-envelope"></i> E-mail : </strong> mdsaifurrehman948@gmail.com
+                    </p>
+                    <p><strong><i class="fa-solid fa-phone"></i> Phone :</strong> +91-6305592707</p>
+                    <p><strong><i class="fa-solid fa-location-dot"></i> Address :</strong> Hyderabad, Telangana, India
+                    </p>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="md:w-1/2 mt-8 md:mt-0">
+                <h2 class="text-2xl md:text-3xl font-semibold text-center mb-6">Get in Touch</h2>
+                <form id="contactForm" action="https://getform.io/f/bdrrdeqb" method="POST" class="space-y-6">
+                    <!-- Name Field -->
+                    <div>
+                        <label for="name" class="block text-sm font-medium mb-2">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name"
+                            class="w-full px-4 py-2 bg-gray-700 text-white border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+                            required>
+                    </div>
+
+                    <!-- Email Field -->
+                    <div>
+                        <label for="email" class="block text-sm font-medium mb-2">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email"
+                            class="w-full px-4 py-2 bg-gray-700 text-white border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+                            required>
+                    </div>
+
+                    <!-- Message Field -->
+                    <div>
+                        <label for="message" class="block text-sm font-medium mb-2">Your Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Write your message here..."
+                            class="w-full px-4 py-2 bg-gray-700 text-white border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+                            required></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="text-center">
+                        <button type="submit"
+                            class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-pink-500 hover:to-purple-500 text-white px-6 py-3 rounded-lg shadow-md transform hover:scale-105 transition-transform">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 p-6 text-center bottom-0">
+        <p class="text-sm text-gray-400">© 2024 <big><b>Hyderabad~Based Home Tutor Finder</b></big>. All rights
+            reserved.</p>
+    </footer>
+</body>
+
+</html>
